@@ -1,23 +1,15 @@
-const Aware = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.color),
-    React.createElement("h2", {}, props.shape),
-  ]);
-};
+import React from "react";
+import { render } from "react-dom";
+import Aware from "./Aware";
+
 const App = () => {
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h1", {}, "Train Me!"),
-    React.createElement(Aware, {
-      color: "blue",
-      shape: "circle",
-    }),
-    React.createElement(Aware, {
-      color: "yellow",
-      shape: "square",
-    })
+  return (
+    <div>
+      <h1>Train Me!</h1>
+      <Aware color="blue" shape="cirle" />
+      <Aware color="yellow" shape="square" />
+    </div>
   );
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
