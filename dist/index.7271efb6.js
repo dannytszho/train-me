@@ -1002,6 +1002,7 @@ var _aware = require("./Aware");
 var _awareDefault = parcelHelpers.interopDefault(_aware);
 const App = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "text-red-600",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                 children: "Train Me!"
@@ -22664,27 +22665,29 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+//import { useState } from "react";
 const Aware = (props)=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "text-gray-200",
                 children: props.color
             }, void 0, false, {
                 fileName: "src/Aware.js",
-                lineNumber: 4,
+                lineNumber: 6,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
                 children: props.shape
             }, void 0, false, {
                 fileName: "src/Aware.js",
-                lineNumber: 5,
+                lineNumber: 7,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Aware.js",
-        lineNumber: 3,
+        lineNumber: 5,
         columnNumber: 5
     }, undefined);
 };
