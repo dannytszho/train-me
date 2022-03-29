@@ -1003,32 +1003,12 @@ var _awareDefault = parcelHelpers.interopDefault(_aware);
 const App = ()=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "text-red-600",
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                children: "Train Me!"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_awareDefault.default, {
-                color: "blue",
-                shape: "cirle"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_awareDefault.default, {
-                color: "yellow",
-                shape: "square"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_awareDefault.default, {}, void 0, false, {
+            fileName: "src/App.js",
+            lineNumber: 8,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/App.js",
         lineNumber: 7,
         columnNumber: 5
@@ -1037,7 +1017,7 @@ const App = ()=>{
 _c = App;
 _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {}, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 15,
+    lineNumber: 13,
     columnNumber: 8
 }, undefined), document.getElementById("root"));
 var _c;
@@ -22665,32 +22645,44 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-//import { useState } from "react";
-const Aware = (props)=>{
+var _react = require("react");
+var _s = $RefreshSig$();
+// color list [blue, yellow, red, white]
+const COLORS = [
+    "bg-yellow-400",
+    "bg-blue-600",
+    "bg-red-600"
+];
+const Aware = ()=>{
+    _s();
+    const [color, setColor] = _react.useState(0);
+    const [number, setNumber] = _react.useState(0);
+    _react.useEffect(()=>{
+        const interval = setInterval(()=>{
+            setColor((c)=>c === 2 ? 0 : c + 1
+            );
+            setNumber(Math.floor(Math.random() * 10 + 1));
+        }, 1000);
+        return ()=>clearInterval(interval)
+        ;
+    }, []);
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "text-gray-200",
-                children: props.color
-            }, void 0, false, {
-                fileName: "src/Aware.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                children: props.shape
-            }, void 0, false, {
-                fileName: "src/Aware.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        className: `h-screen p-2 mt-10 ${COLORS[color]}`,
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+            className: "text-black text-9xl pt-56 text-center",
+            children: number
+        }, void 0, false, {
+            fileName: "src/Aware.js",
+            lineNumber: 20,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/Aware.js",
-        lineNumber: 5,
+        lineNumber: 19,
         columnNumber: 5
     }, undefined);
 };
+_s(Aware, "u2bYpFP/9Rq2m6HKBUMaRPTbRbs=");
 _c = Aware;
 exports.default = Aware;
 var _c;
@@ -22701,7 +22693,7 @@ $RefreshReg$(_c, "Aware");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react/jsx-dev-runtime":"iTorj"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
